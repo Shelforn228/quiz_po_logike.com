@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Moto Quiz</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- Стартовый экран -->
+        <section class="screen active" id="start-screen">
+
+            <div class="start-card">
+
+                <div class="logo">🏍️</div>
+
+                <p class="subtitle">MOTORCYCLE KNOWLEDGE</p>
+
+                <h1>MOTO QUIZ</h1>
+
+                <p class="description">
+                    Проверь свои знания о мотоциклах, технике и устройстве байков.
+                    15 вопросов и немного времени на каждый.
+                </p>
+
+                <div class="quiz-info">
+                    <div>
+                        <strong>15</strong>
+                        <span>вопросов</span>
+                    </div>
+
+                    <div>
+                        <strong>15 сек</strong>
+                        <span>на вопрос</span>
+                    </div>
+
+                    <div>
+                        <strong>🏆</strong>
+                        <span>результат</span>
+                    </div>
+                </div>
+
+                <button id="start-btn" class="main-btn">
+                    Начать квиз
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- Экран вопросов -->
+        <section class="screen" id="quiz-screen">
+
+            <div class="quiz-card">
+
+                <div class="quiz-top">
+
+                    <div>
+                        <span class="label">ВОПРОС</span>
+
+                        <div class="question-number">
+                            <span id="current-question">1</span>
+                            /
+                            <span id="total-questions">15</span>
+                        </div>
+                    </div>
+
+                    <div class="timer" id="timer">
+                        <span>⏱</span>
+                        <span id="time">15</span>
+                    </div>
+
+                </div>
+
+
+                <div class="progress">
+                    <div id="progress-bar"></div>
+                </div>
+
+
+                <h2 id="question">
+                    Вопрос
+                </h2>
+
+
+                <div id="answers" class="answers">
+                    <!-- Ответы добавляются через JS -->
+                </div>
+
+            </div>
+
+        </section>
+
+
+        <!-- Экран результата -->
+        <section class="screen" id="result-screen">
+
+            <div class="result-card">
+
+                <div class="result-icon" id="result-icon">
+                    🏆
+                </div>
+
+                <p class="subtitle">QUIZ COMPLETED</p>
+
+                <h2>Тест завершён</h2>
+
+                <p id="result-message">
+                    Хороший результат!
+                </p>
+
+
+                <div class="score-circle">
+
+                    <div class="score-inner">
+
+                        <span id="score-percent">0%</span>
+
+                        <small>результат</small>
+
+                    </div>
+
+                </div>
+
+
+                <div class="result-stats">
+
+                    <div class="stat">
+                        <strong id="correct-count">0</strong>
+                        <span>Правильных</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong id="wrong-count">0</strong>
+                        <span>Ошибок</span>
+                    </div>
+
+                    <div class="stat">
+                        <strong id="total-count">15</strong>
+                        <span>Всего</span>
+                    </div>
+
+                </div>
+
+
+                <button id="restart-btn" class="main-btn">
+                    Пройти ещё раз
+                </button>
+
+            </div>
+
+        </section>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
